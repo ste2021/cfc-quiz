@@ -1,6 +1,26 @@
-# CFC Quiz -  App made by Angular CLI <img src="https://github.com/ste2021/images-icons/blob/master/iconfinder_angular-js_3069652.png" width=25 height=26 />
+### DEV : [Estela de Oliveira](https://github.com/ste2021) 🚀
+
+``Project Summary```
 
 ### Project consists of a Simulated Quiz to help people pass the CRC exam
+
+```Requirements```
+
+- [x] An IDE of your own, here I used VSCODE 🖥
+- [x] Node JS Installed
+- [x] Angular CLI installed
+
+
+```Technologies Used```
+
+- [x] HTML 📗
+- [x] CSS 📘
+- [x] Javascript 📙
+- [x] Typescript
+- [x] Angular CLI
+
+# CFC Quiz -  App made by Angular CLI <img src="https://github.com/ste2021/images-icons/blob/master/iconfinder_angular-js_3069652.png" width=25 height=26 />
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
 ## To run the project
