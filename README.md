@@ -1,6 +1,6 @@
 ### DEV : [Estela de Oliveira](https://github.com/ste2021) 🚀
 
-``Project Summary```
+```Project Summary```
 
 ### Project consists of a Simulated Quiz to help people pass the CRC exam
 
