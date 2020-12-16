@@ -24,7 +24,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
 ## To run the project
-
+```npm install```
 ```ng serve --open```
 
 ### In case of error: "ERROR in node_modules/rxjs", run this code:
