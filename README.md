@@ -23,7 +23,7 @@
 
 # CFC Quiz -  App made by Angular CLI <img src="https://github.com/ste2021/images-icons/blob/master/iconfinder_angular-js_3069652.png" width=25 height=26 />
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+This project was generated with [Angular](https://angular.io/docs) version 6.0.7.
 
 ## To run the project
 ```npm install```
