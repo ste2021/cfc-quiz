@@ -1,6 +1,6 @@
 ### DEV : [Estela de Oliveira](https://github.com/ste2021) 🚀
 
-#### Observe the progress of this project in trello, clicking ▶ [HERE](https://trello.com/b/XWwSZoEB/cfc-quiz-angular)
+#### Observe the progress of this project in Trello, clicking ▶ [HERE](https://trello.com/b/XWwSZoEB/cfc-quiz-angular)
 
 ```Project Summary```
 
