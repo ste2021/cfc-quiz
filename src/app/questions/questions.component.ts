@@ -12,6 +12,7 @@ export class QuestionsComponent implements OnInit {
   userName: string = '';
   questions: Questions[] = [];
   id: number = 0;
+  answer: number;
   
 
   @Input()  Question: string = '';
@@ -28,6 +29,7 @@ export class QuestionsComponent implements OnInit {
 
   load() {
     this.questionsService
+    .correctAnswerCount
       ;
       
   }
