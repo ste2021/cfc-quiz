@@ -17,12 +17,13 @@ export class QuestionsService {
 
 //---------------- Http Methods---------------
   constructor(private http: HttpClient) { }
- 
+
+ //buscar user por id
   getUser(id){
     return this.http.get(`${this.rootUrl}/${id}`)
   }
 
-  
+  //inserir user
   insertParticipant(name: string, email: string) {
     var body = {
       Name: name,
@@ -30,15 +31,17 @@ export class QuestionsService {
     }
     return this.http.post(this.rootUrl + '/Users', body);
   }
-  
+  //pegar questoes por Id
   getQuestionsId(id): Observable<Questions[]> {
     return this.http.get<Questions[]>(`${this.rootUrl}/Questions/${id}`)
   }
 
-
-  getQuestions() {
-    return this.http.get(this.rootUrl + '/Questions');
+//pegar Questoes
+  getQuestions(): Observable<Questions[]> {
+    return this.http.get<Questions[]>(this.rootUrl + '/Questions');
   }
+
+
 
 
 }
