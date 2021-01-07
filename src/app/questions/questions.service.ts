@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class QuestionsService {
   //---------------- Properties---------------
-  readonly rootUrl = 'http://localhost:2690';
+  readonly rootUrl = 'http://localhost:3000';
   qns: any[];
   seconds: number;
   timer;
@@ -13,10 +13,7 @@ export class QuestionsService {
 
   //---------------- Helper Methods---------------
   constructor(private http: HttpClient) { }
-  displayTimeElapsed() {
-    return Math.floor(this.seconds / 3600) + ':' + Math.floor(this.seconds / 60) + ':' + Math.floor(this.seconds % 60);
-  }
-
+ 
   getParticipantName() {
     var participant = JSON.parse(localStorage.getItem('participant'));
     return participant.Name;
