@@ -9,9 +9,9 @@ export class QuestionsService {
  
   //---------------- Properties---------------
   readonly rootUrl = 'http://localhost:3000';
-  questions: [] = [];
+  // questions: [] = [];
   
-  id: number;
+  id: number = 0;
 
 //---------------- Http Methods---------------
   constructor(private http: HttpClient) { }
@@ -26,7 +26,7 @@ export class QuestionsService {
       Name: name,
       Email: email
     }
-    return this.http.post(this.rootUrl + '/api/InsertParticipant', body);
+    return this.http.post(this.rootUrl + '/InsertParticipant', body);
   }
   
   get(id) {

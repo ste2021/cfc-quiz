@@ -1,4 +1,4 @@
-<div *ngIf="questionsObs | async; else carregando">
+<div *ngIf="questionsObs | async; else loading">
 
     <h2 class="quiz-question">{{question.id}}- {{question.id_question}}</h2>
     <p class="main-question"> {{question.main_question}}</p>
@@ -32,7 +32,7 @@
             
     </div>
 </div>
-<ng-template #carregando>
+<ng-template #loading>
     <div>
         <p>Carregando questão ...</p>
     </div>
