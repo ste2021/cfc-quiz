@@ -46,7 +46,7 @@ export class QuestionsComponent implements OnInit {
       catchError(error => {
         console.log('Deu erro' + error)
         return of(error);
-      }),
+      })
 
     );
   }
