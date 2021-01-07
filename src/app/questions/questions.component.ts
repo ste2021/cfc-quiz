@@ -38,7 +38,7 @@ export class QuestionsComponent implements OnInit {
   }
 
     loadQuestion(){
-    this.questionObs = this.questionsService.get(this.questaoAtual)
+    this.questionObs = this.questionsService.getQuestionsId(this.questaoAtual)
     .pipe(
       tap((response:any) =>{
         this.question = response;

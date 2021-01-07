@@ -18,8 +18,8 @@ export class QuestionsService {
 //---------------- Http Methods---------------
   constructor(private http: HttpClient) { }
  
-  getUser(id): Observable<Questions[]> {
-    return this.http.get<Questions[]>(`${this.rootUrl}/${id}`)
+  getUser(id){
+    return this.http.get(`${this.rootUrl}/${id}`)
   }
 
   
@@ -31,8 +31,8 @@ export class QuestionsService {
     return this.http.post(this.rootUrl + '/Users', body);
   }
   
-  get(id) {
-    return this.http.get(`${this.rootUrl}/Questions/${id}`)
+  getQuestionsId(id): Observable<Questions[]> {
+    return this.http.get<Questions[]>(`${this.rootUrl}/Questions/${id}`)
   }
 
 
