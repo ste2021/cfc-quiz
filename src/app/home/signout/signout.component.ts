@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
     templateUrl: './signout.component.html',
 })
 
-export class SignoutComponent {}
+export class SignOutComponent {}

@@ -11,12 +11,13 @@ import { AppRoutingModule } from './app.routing.module';
   declarations: [
     AppComponent,
     QuestionsComponent,
-    HomeModule
+    
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

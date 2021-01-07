@@ -1,27 +1,23 @@
 <h4 class="text-center">Login</h4>
 
 <form [formGroup]="loginform" class="form mt-4">
-
     <div class="form-group">
-        <input 
-            class="form-control" 
-            placeholder="user name" 
-            autofocus>  
+        <input formControlName="userName" class="form-control" placeholder="user name" autofocus>
+        <small *ngIf="loginForm.get('userName').errors?.required" class="text-danger d-block mt-2">
+            User name is required!
+        </small>
+
+        <input formControlName="password" type="password" class="form-control" placeholder="password">
+        <small *ngIf="loginForm.get('password').errors?.required" class="text-danger d-block mt-2">
+            Password is required!
+        </small>
     </div>
 
-    <div class="form-group">
-        <input
-            type="password" 
-            class="form-control" 
-            placeholder="password">              
-    </div>
+    <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block">
 
-    <button 
-        type="submit" 
-        class="btn btn-primary btn-block">
         login
     </button>
 
 </form>
 
-<p>Não é um usuário<a>Registre-se Aqui</a></p>
+<p>Not a user?<a>Register now</a></p>
