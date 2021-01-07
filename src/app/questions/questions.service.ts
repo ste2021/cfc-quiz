@@ -6,10 +6,9 @@ import { HttpClient } from '@angular/common/http';
 export class QuestionsService {
   //---------------- Properties---------------
   readonly rootUrl = 'http://localhost:3000';
-  qns: any[];
-  seconds: number;
-  timer;
+  questions: [] = [];
   correctAnswerCount: number = 0;
+  id: number = 0;
 
   //---------------- Helper Methods---------------
   constructor(private http: HttpClient) { }

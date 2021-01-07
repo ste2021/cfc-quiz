@@ -1,13 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Questions } from './questions';
 import { QuestionsService } from './questions.service';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-questions',
   templateUrl: './questions.component.html',
   styleUrls: ['./questions.component.css']
 })
+
 export class QuestionsComponent implements OnInit {
   userName: string = '';
   questions: Questions[] = [];
@@ -17,21 +18,22 @@ export class QuestionsComponent implements OnInit {
 
   @Input()  Question: string = '';
 
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private questionsService: QuestionsService
-  ) { }
+  constructor( private router: Router, private questionsService: QuestionsService ) { }
 
   ngOnInit(): void {
-   
-    this.questions = this.activatedRoute.snapshot.data['questions'];
+
+          this.questionsService.getQuestions().subscribe(
+            (data: any) => {
+              this.questions = data;
+            }   
+        )
   }
 
-  load() {
-    this.questionsService
-    .correctAnswerCount
-      ;
-      
+  Answer(choice) {
+    this.questionsService.id[this.questionsService.id].answer = choice;
+    localStorage.setItem('id', JSON.stringify(this.questionsService.id));
+    this.questionsService.id++;
+    
+      }
   }
-}
-
+    
