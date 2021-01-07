@@ -26,11 +26,11 @@ export class QuestionsService {
       Name: name,
       Email: email
     }
-    return this.http.post(this.rootUrl + '/InsertParticipant', body);
+    return this.http.post(this.rootUrl + '/Users', body);
   }
   
   get(id) {
-    return this.http.get(`${this.rootUrl}/${id}`)
+    return this.http.get(`${this.rootUrl}/Questions/${id}`)
   }
 
 
