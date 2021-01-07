@@ -25,11 +25,12 @@
     <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
         <button (click)="prev()" id="previous" class="btn btn-info d-flex align-items-right btn-danger" type="button">
             Previous</button>
-                <button (click)="next()" id="next" class="btn btn-info border-success align-items-center btn-secondary" type="button">
-                    Next</button>
-                    <button (click)="answer()" id="next" class="btn btn-info border-success align-items-center btn-secondary" type="button">
-                        Responder</button>
-            
+        <button (click)="answer()" id="next" class="btn btn-info border-success align-items-center btn-secondary"
+            type="button">
+            Responder</button>
+        <button (click)="next()" id="next" class="btn btn-info border-success align-items-center btn-secondary"
+            type="button">
+            Next</button>
     </div>
 </div>
 <ng-template #loading>
