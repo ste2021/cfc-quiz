@@ -4,8 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, tap} from 'rxjs/operators';
 
 import { Questions } from './questions';
-import { HttpErrorResponse } from '@angular/common/http';
-import { throwError } from 'rxjs';
+
 
 @Component({
   selector: 'app-questions',
@@ -14,6 +13,7 @@ import { throwError } from 'rxjs';
 })
 
 export class QuestionsComponent implements OnInit {
+  [x: string]: any;
   
   questionObs: Observable<any>;
   question: Questions;
@@ -27,7 +27,7 @@ export class QuestionsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getQuestions();
+    
     this.loadQuestion();
   }
 //button next
@@ -47,23 +47,15 @@ export class QuestionsComponent implements OnInit {
       tap((response:any) =>{
         this.question = response;
       }),
-      catchError(this.handleError)
+      catchError(error => {
+        alert('Acabaram as questões');
+        this.prev();
+        return of(error);
+      }),
 
     );
   }
-  //tratamento de erros
-  handleError(error: HttpErrorResponse) {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
-      // Erro ocorreu no lado do client
-      errorMessage = error.error.message;
-    } else {
-      // Erro ocorreu no lado do servidor
-      errorMessage = `Código do erro: ${error.status}, ` + `menssagem: ${error.message}`;
-    }
-    console.log(errorMessage);
-    return throwError(errorMessage);
-  };
+
 
   }
 

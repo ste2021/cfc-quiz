@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Questions } from './questions';
+import { User} from '../User';
 
 @Injectable({
   providedIn: 'root',
@@ -30,6 +31,10 @@ export class QuestionsService {
       Email: email
     }
     return this.http.post(this.rootUrl + '/Users', body);
+  }
+  //pegar user por Id
+  getUserId(id): Observable<User[]> {
+    return this.http.get<User[]>(`${this.rootUrl}/Users/${id}`)
   }
   //pegar questoes por Id
   getQuestionsId(id): Observable<Questions[]> {
