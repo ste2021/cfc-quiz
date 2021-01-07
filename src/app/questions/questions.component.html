@@ -1,34 +1,39 @@
-<div class="container-fluid bg-info">
-    <div class="modal-dialog">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h3><span class="label label-warning" id="qid">2</span> {{Question}}</h3>
-        </div>
-        <div class="modal-body">
-            <div class="col-xs-3 col-xs-offset-5">
-               <div id="loadbar" style="display: none;">
-                  <div class="blockG" id="rotateG_01"></div>
-                  <div class="blockG" id="rotateG_02"></div>
-                  <div class="blockG" id="rotateG_03"></div>
-                  <div class="blockG" id="rotateG_04"></div>
-                  <div class="blockG" id="rotateG_05"></div>
-                  <div class="blockG" id="rotateG_06"></div>
-                  <div class="blockG" id="rotateG_07"></div>
-                  <div class="blockG" id="rotateG_08"></div>
-              </div>
-          </div>
+<div *ngIf="questionsObs | async; else carregando">
 
-          <div class="quiz" id="quiz" data-toggle="buttons">
-           <label class="element-animation1 btn btn-lg btn-info btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">A</label>
-           <label class="element-animation2 btn btn-lg btn-info btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">B</label>
-           <label class="element-animation3 btn btn-lg btn-info btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">C</label>
-           <label class="element-animation4 btn btn-lg btn-info btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">D</label>
-       </div>
-   </div>
-   <div class="modal-footer text-muted">
-    <span id="answer"></span>
-    <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white"><button id="previous" class="btn btn-info d-flex align-items-right btn-danger" type="button"><i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;Previous</button><button id="next" class="btn btn-info border-success align-items-center btn-secondary" type="button">Next<i class="fa fa-angle-right ml-4"></i></button></div>
+    <h2 class="quiz-question">{{question.id}}- {{question.id_question}}</h2>
+    <p class="main-question"> {{question.main_question}}</p>
+
+    <ul data-quiz-question="1">
+        <li class="quiz-answer">
+            <input type="radio" name="questao" id="altA" value="A">
+            <label for="altA">{{question.altA}}></label>
+        </li>
+        <li class="quiz-answer">
+            <input type="radio" name="questao" id="altA" value="B">
+            <label for="altB">{{question.altB}}></label>
+        </li>
+        <li class="quiz-answer">
+            <input type="radio" name="questao" id="altA" value="C">
+            <label for="altC">{{question.altC}}></label>
+        </li>
+        <li class="quiz-answer">
+            <input type="radio" name="questao" id="altA" value="D">
+            <label for="altD">{{question.altD}}></label>
+        </li>
+
+    </ul>
+    <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+        <button (click)="prev()" id="previous" class="btn btn-info d-flex align-items-right btn-danger" type="button">
+            Previous</button>
+                <button (click)="next()" id="next" class="btn btn-info border-success align-items-center btn-secondary" type="button">
+                    Next</button>
+                    <!-- <button (click)="answer()" id="next" class="btn btn-info border-success align-items-center btn-secondary" type="button">
+                        Responder</button> -->
+            
+    </div>
 </div>
-</div>
-</div>
-</div>
+<ng-template #carregando>
+    <div>
+        <p>Carregando questão ...</p>
+    </div>
+</ng-template>

@@ -1,7 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Questions } from './questions';
 import { QuestionsService } from './questions.service';
-import { Router } from '@angular/router';
+import { Observable, of } from 'rxjs';
+import { catchError, tap} from 'rxjs/operators';
+
+import { Questions } from './questions';
 
 @Component({
   selector: 'app-questions',
@@ -10,30 +12,47 @@ import { Router } from '@angular/router';
 })
 
 export class QuestionsComponent implements OnInit {
-  userName: string = '';
-  questions: Questions[] = [];
-  id: number = 0;
-  answer: number;
+  
+  questionObs: Observable<any>;
+  question: Questions;
+  questaoAtual = 1;
   
 
   @Input()  Question: string = '';
 
-  constructor( private router: Router, private questionsService: QuestionsService ) { }
+  constructor(
+    private questionsService: QuestionsService 
+  ) { }
 
   ngOnInit(): void {
-
-          this.questionsService.getQuestions().subscribe(
-            (data: any) => {
-              this.questions = data;
-            }   
-        )
+    this.loadQuestion();
   }
 
-  Answer(choice) {
-    this.questionsService.id[this.questionsService.id].answer = choice;
-    localStorage.setItem('id', JSON.stringify(this.questionsService.id));
-    this.questionsService.id++;
-    
-      }
+  next(): void{
+    this.questaoAtual++;
+    this.loadQuestion();
   }
+  previous(): void{
+    this.questaoAtual--;
+    this.loadQuestion();
+  }
+
+    loadQuestion(){
+    this.questionObs = this.questionsService.get(this.questaoAtual)
+    .pipe(
+      tap((response:any) =>{
+        this.question = response;
+      }),
+      catchError(error => {
+        console.log('Deu erro' + error)
+        return of(error);
+      }),
+
+    );
+  }
+
+  }
+
+
+ 
     
