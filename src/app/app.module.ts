@@ -6,6 +6,7 @@ import { QuestionsComponent } from './questions/questions.component';
 import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './routes';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Questions } from './questions';
 import { User} from '../User';
@@ -19,6 +19,11 @@ export class QuestionsService {
 //---------------- Http Methods---------------
   constructor(private http: HttpClient) { }
 
+  // Headers
+    httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    }
+
  //buscar user por id
   getUser(id){
     return this.http.get(`${this.rootUrl}/${id}`)
@@ -32,19 +37,22 @@ export class QuestionsService {
     }
     return this.http.post(this.rootUrl + '/Users', body);
   }
+
+
   //pegar user por Id
   getUserId(id): Observable<User[]> {
     return this.http.get<User[]>(`${this.rootUrl}/Users/${id}`)
   }
+  //pegar Questoes
+  getQuestions(): Observable<Questions> {
+    return this.http.get<Questions>(this.rootUrl + '/Questions');
+  }
+
   //pegar questoes por Id
   getQuestionsId(id): Observable<Questions[]> {
     return this.http.get<Questions[]>(`${this.rootUrl}/Questions/${id}`)
   }
 
-//pegar Questoes
-  getQuestions(): Observable<Questions[]> {
-    return this.http.get<Questions[]>(this.rootUrl + '/Questions');
-  }
 
 
 

@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import {RouterModule, Routes} from '@angular/router'
+import { SignInComponent } from './home/signin/signin.component';
 import { QuestionsComponent } from './questions/questions.component';
 
 
-export const appRoutes : Routes =[
+const appRoutes : Routes =[
     
     {path:'questions',component:QuestionsComponent},
+    {path: '', component: SignInComponent}
     // {path:'',redirectTo:'/register',pathMatch:'full'}
 ];
 

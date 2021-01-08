@@ -17,6 +17,7 @@ export class QuestionsComponent implements OnInit {
   
   questionObs: Observable<any>;
   question: Questions;
+  choice: any;
   questaoAtual = 1;
   
 
@@ -36,10 +37,12 @@ export class QuestionsComponent implements OnInit {
     this.loadQuestion();
   }
   //button previous
-  previous(): void{
+  prev(): void{
     this.questaoAtual--;
     this.loadQuestion();
   }
+ 
+  
  //carregar Question
     loadQuestion(){
     this.questionObs = this.questionsService.getQuestionsId(this.questaoAtual)
@@ -55,10 +58,22 @@ export class QuestionsComponent implements OnInit {
 
     );
   }
+   //button Responder
+   answer(){
+     if(this.choice === this.questions.answer){
+       alert('Parabéns Você acertou');
+     } else {
+       alert('Errou');
+     }
+    this.questionService.answer(this.question.id,this.choice)
+    .subscribe( (response: any) => {
+      alert('Resposta Enviada');
+      this.next();
+    })
 
 
   }
 
 
- 
+}
     
