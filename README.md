@@ -11,7 +11,7 @@
 - [x] An IDE of your own, here I used VSCODE 🖥
 - [x] Node JS Installed
 - [x] Angular CLI installed
-
+- [x] Json-server
 
 ```Technologies Used```
 
@@ -20,6 +20,7 @@
 - [x] Javascript 📙
 - [x] Typescript
 - [x] Angular CLI
+- [x] [Json-server](https://www.npmjs.com/package/json-server)
 
 # CFC Quiz -  App made by Angular CLI <img src="https://github.com/ste2021/images-icons/blob/master/iconfinder_angular-js_3069652.png" width=25 height=26 />
 
@@ -28,6 +29,9 @@ This project was generated with [Angular](https://angular.io/docs) version 6.0.7
 ## To run the project
 ```npm install```
 ```ng serve --open```
+
+## To run the API-Fake"
+```json-server json/db.json```
 
 ### In case of error: "ERROR in node_modules/rxjs", run this code:
 
