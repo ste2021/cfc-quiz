@@ -3,7 +3,7 @@ import { QuestionsService } from './questions.service';
 import { Observable, of } from 'rxjs';
 import { catchError, tap} from 'rxjs/operators';
 
-import { Questions } from './questions';
+import { Questions } from './model/questions';
 
 
 @Component({
