@@ -13,7 +13,7 @@
             <span class="btn-label"><i class="align-middle fa fa-chevron-right"></i></span>
             <input type="radio" name="q_answer" value="2" id="altA" value="A"
                 [(ngModel)]="choice">{{question.altA}}</label>
-        <label for="altB" class="element-animation2 btn btn-lg btn-info btn-block">
+        <label class="element-animation2 btn btn-lg btn-info btn-block">
             <span class="btn-label"><i class="fa fa-chevron-right"></i></span>
             <input type="radio" name="q_answer" value="2">{{question.altB}}</label>
         <label class="element-animation3 btn btn-lg btn-info btn-block">
@@ -22,26 +22,7 @@
         <label class="element-animation4 btn btn-lg btn-info btn-block">
             <span class="btn-label"><i class="fa fa-chevron-right"></i></span>
             <input type="radio" name="q_answer" value="4">{{question.altD}}</label>
-        <!-- <ul >
-        <li class="quiz-answer">
-            <label for="altA">{{question.altA}}
-                <input type="checkbox" name="questao" id="altA" value="A" [(ngModel)]="choice">
-            </label>
-        </li>
-        <li class="quiz-answer">
-            <input class="btn btn-info" type="radio" name="questao" id="altA" value="B" [(ngModel)]="choice">
-            <label for="altB">{{question.altB}}</label>
-        </li>
-        <li class="quiz-answer">
-            <input type="radio" name="questao" id="altA" value="C" [(ngModel)]="choice">
-            <label for="altC">{{question.altC}}</label>
-        </li>
-        <li class="quiz-answer">
-            <input type="radio" name="questao" id="altA" value="D" [(ngModel)]="choice">
-            <label for="altD">{{question.altD}}</label>
-        </li> -->
-
-    </div>
+          </div>
     <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
         <button (click)="prev()" id="previous" class="btn btn-info d-flex align-items-right btn-danger" type="button">
             Previous</button>

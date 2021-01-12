@@ -29,20 +29,19 @@ export class QuestionsService {
     return this.http.get(`${this.rootUrl}/${id}`)
   }
 
-  //inserir user
-  insertParticipant(name: string, email: string) {
-    var body = {
-      Name: name,
-      Email: email
-    }
-    return this.http.post(this.rootUrl + '/Users', body);
-  }
+  // //inserir user
+  // insertParticipant(name: string, email: string) {
+  //   var body = {
+  //     Name: name,
+  //     Email: email
+  //   }
+  //   return this.http.post(this.rootUrl + '/Users', body);
+  // }
 
-
-  //pegar user por Id
-  getUserId(id): Observable<User[]> {
-    return this.http.get<User[]>(`${this.rootUrl}/Users/${id}`)
-  }
+  // //pegar user por Id
+  // getUserId(id): Observable<User[]> {
+  //   return this.http.get<User[]>(`${this.rootUrl}/Users/${id}`)
+  // }
   //pegar Questoes
   getQuestions(): Observable<Questions> {
     return this.http.get<Questions>(this.rootUrl + '/Questions');

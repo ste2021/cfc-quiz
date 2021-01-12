@@ -130,6 +130,9 @@ label .btn-label {
 label .glyphicon {
     top: 34%
 }
+input {
+  display: none;
+}
 .element-animation1 {
     animation: animationFrames ease .8s;
     animation-iteration-count: 1;
