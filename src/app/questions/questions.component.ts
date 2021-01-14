@@ -5,7 +5,6 @@ import { catchError, tap} from 'rxjs/operators';
 
 import { Questions } from '../models/questions';
 
-
 @Component({
   selector: 'app-questions',
   templateUrl: './questions.component.html',
@@ -13,11 +12,11 @@ import { Questions } from '../models/questions';
 })
 
 export class QuestionsComponent implements OnInit {
-  [x: string]: any;
   
+  [x: string]: any;
   questionObs: Observable<any>;
   question: Questions;
-  choice: any;
+  answer: any;
   questaoAtual = 1;
   
 

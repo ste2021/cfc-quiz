@@ -7,13 +7,14 @@ import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './routes';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionsComponent,
-    
+    NavComponent
     
   ],
   imports: [
@@ -24,6 +25,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, QuestionsComponent, NavComponent]
 })
 export class AppModule { }
