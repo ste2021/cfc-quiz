@@ -1,14 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import {RouterModule, Routes} from '@angular/router'
 
 import { SignInComponent } from './home/login/signin.component';
-
-
 import { QuestionsComponent } from './questions/questions.component';
-
 
 const appRoutes : Routes =[
     
