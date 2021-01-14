@@ -3,7 +3,7 @@ import { QuestionsService } from './questions.service';
 import { Observable, of } from 'rxjs';
 import { catchError, tap} from 'rxjs/operators';
 
-import { Questions } from './model/questions';
+import { Questions } from '../models/questions';
 
 
 @Component({
@@ -41,7 +41,19 @@ export class QuestionsComponent implements OnInit {
     this.questaoAtual--;
     this.loadQuestion();
   }
- 
+  //button Responder
+  buttonAnswer(){
+    if(this.answer === this.question.answer){
+      alert('Parabéns Você acertou');
+    } else {
+      alert('Errou');
+    }
+   this.questionService.getAnswer(this.question.id,this.answer)
+   .subscribe((response: any) => {
+     alert('Resposta Enviada');
+     this.next();
+   })
+ }
   
  //carregar Question
     loadQuestion(){
@@ -58,22 +70,6 @@ export class QuestionsComponent implements OnInit {
 
     );
   }
-   //button Responder
-   answer(){
-     if(this.choice === this.questions.answer){
-       alert('Parabéns Você acertou');
-     } else {
-       alert('Errou');
-     }
-    this.questionService.answer(this.question.id,this.choice)
-    .subscribe( (response: any) => {
-      alert('Resposta Enviada');
-      this.next();
-    })
-
-
-  }
-
-
+ 
 }
     

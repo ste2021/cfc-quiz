@@ -12,21 +12,24 @@
         <label for="altA" class="element-animation1 btn btn-lg btn-info btn-block">
             <span class="btn-label"><i class="align-middle fa fa-chevron-right"></i></span>
             <input type="radio" name="q_answer" value="2" id="altA" value="A"
-                [(ngModel)]="choice">{{question.altA}}</label>
+            [(ngModel)]="answer">{{question.altA}}</label>
         <label class="element-animation2 btn btn-lg btn-info btn-block">
             <span class="btn-label"><i class="fa fa-chevron-right"></i></span>
-            <input type="radio" name="q_answer" value="2">{{question.altB}}</label>
+            <input type="radio" name="q_answer" value="B" 
+            [(ngModel)]="answer">{{question.altB}}</label>
         <label class="element-animation3 btn btn-lg btn-info btn-block">
             <span class="btn-label"><i class="fa fa-chevron-right"></i></span>
-            <input type="radio" name="q_answer" value="3">{{question.altC}}</label>
+            <input type="radio" name="q_answer" value="C" 
+            [(ngModel)]="answer">{{question.altC}}</label>
         <label class="element-animation4 btn btn-lg btn-info btn-block">
             <span class="btn-label"><i class="fa fa-chevron-right"></i></span>
-            <input type="radio" name="q_answer" value="4">{{question.altD}}</label>
-          </div>
+            <input type="radio" name="q_answer" value="D" 
+            [(ngModel)]="answer">{{question.altD}}</label>
+    </div>
     <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
-        <button (click)="prev()" id="previous" class="btn btn-info d-flex align-items-right btn-danger" type="button">
+        <button (click)="prev()" id="previous" class="btn btn-info d-flex align-items-right btn-secondary" type="button">
             Previous</button>
-        <button (click)="answer()" id="answer" class="btn btn-info border-success align-items-center btn-secondary"
+        <button (click)="buttonAnswer()" id="answer" class="btn btn-info border-success align-items-center btn-secondary"
             type="button">
             Responder</button>
         <button (click)="next()" id="next" class="btn btn-info border-success align-items-center btn-secondary"
