@@ -11,6 +11,7 @@
 		"userName": "Estelinha",
 		"Email": "estela@pecege.com",
 		"password": "pecege"	
+
 	}
 ],
 	
@@ -25,9 +26,9 @@
 		"mainIII": "III.Cujos resultados operacionais são regularmente revistos pelo principal gestor das operações da entidade para a tomada de decisões sobre recursos a serem alocados ao segmento e para a avaliação do seu desempenho.Completam corretamente as informações do enunciado o disposto em ",
 
 		"altA": "A) I, II e III",
-		"altB": "I e II, apenas.",
-		"altC": "I e III, apenas.",
-		"altD": "II e III, apenas",
+		"altB": "B) I e II, apenas.",
+		"altC": "C) I e III, apenas.",
+		"altD": "D) II e III, apenas",
 
 		"answer": "A"
 	},
