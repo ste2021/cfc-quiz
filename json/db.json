@@ -1,0 +1,83 @@
+{
+	"Users": [
+	{
+		"id": 1,
+		"userName": "Teco",
+		"Email": "teco@pecege.com",
+		"password": "pecege"
+	},
+	{
+		"id": 1,
+		"userName": "Estelinha",
+		"Email": "estela@pecege.com",
+		"password": "pecege"	
+	}
+],
+	
+	"Questions":[
+
+	{
+		"id": 1,
+		"id_question": "CRC 01/2019 – Questão nº 02 da Prova Branca (nº 09 da Prova Verde, nº 04 da Prova Amarela e nº 06 da Prova Azul)",
+		"main_question": "Informações por segmento, um segmento operacional é um componente de entidade:",
+		"mainI": "I.Para o qual haja informação financeira individualizada disponível.",
+		"mainII":"II.Que desenvolve atividades de negócio das quais pode obter receitas e incorrer em despesas(incluindo receitas e despesas relacionadas com transações com outros componentes da mesma entidade).",
+		"mainIII": "III.Cujos resultados operacionais são regularmente revistos pelo principal gestor das operações da entidade para a tomada de decisões sobre recursos a serem alocados ao segmento e para a avaliação do seu desempenho.Completam corretamente as informações do enunciado o disposto em ",
+
+		"altA": "A) I, II e III",
+		"altB": "I e II, apenas.",
+		"altC": "I e III, apenas.",
+		"altD": "II e III, apenas",
+
+		"answer": "A"
+	},
+	{
+		"id": 2,
+		"id_question": "CRC 01/2019 – Questão nº 08 da Prova Branca (nº 03 da Prova Verde, nº 06 da Prova Amarela e nº 01 da Prova Azul) – Contabilidade Geral",
+		"main_question": "A Sociedade Empresária A é do setor de varejo e comercializa suas centenas de produtos com uma garantia segundo a qual os clientes estarão cobertos pelo custo da reparação de qualquer defeito de fabricação que se tornar evidente dentro do primeiro ano após a compra.A experiência passada da Sociedade Empresária A e as expectativas futuras indicam que, para o próximo ano, dos seus produtos vendidos, 60 % não apresentarão defeitos, 30 % apresentarão defeitos menores e 10 % apresentarão defeitos maiores.",
+        "mainI": "Outras informações: A Sociedade Empresária A irá incorrer: Em custos de reparação de R$ 800.000,00, caso sejam detectados defeitos menores em todos os seus produtos vendidos. Em custos de reparação de R$ 1.500 .000 .00, caso sejam detectados defeitos maiores em todos os produtos vendidos. Considerando - se apenas as informações apresentadas e a NBC TG 25(R2)– Provisões, passivos contingentes e ativos contingentes, assinale o valor esperado do custo das reparações que a Sociedade Empresária A reconheceria como provisão.",
+        "mainII": "Admita que os valores dos custos de reparação, caso sejam detectados defeitos, e as probabilidades associadas aos possíveis desfechos, foram determinados pelo julgamento da Sociedade Empresária A, complementado pela experiência de transações semelhantes somado aos relatórios de peritos independentes.Ainda, admita que os critérios para reconhecimento da provisão foram atendidos conforme determina a NBC TG 25(R2)",
+        "mainIII": "",
+		"altA": "A) R$ 390.000,00",
+		"altB": "B) R$ 530.000,00",
+		"altC": "C) R$ 920.000,00",
+		"altD": "D) R$ 2.300.000,00",
+
+		"answer": "A"
+	},
+	{
+		"id": 3,
+		"id_question": "CRC 01/2019 – Questão nº 12 da Prova Branca (nº 14 da Prova Verde, nº 10 da Prova Amarela e nº 13 da Prova Azul) – Contabilidade Geral",
+
+		"main_question": "De acordo com a NBC TG 26 (R5), o conjunto completo de demonstrações contábeis NÃO inclui:",
+		"mainI": "",
+        "mainII": "",
+        "mainIII": "",
+		"altA": "A) Demonstração dos fluxos de caixa do período.",
+		"altB": "B) Demonstração do resultado abrangente do período.",
+		"altC": "C) Demonstração das origens e aplicações dos recursos.",
+		"altD": "D) Notas explicativas, compreendendo as políticas contábeis significativas e outras informações elucidativas.",
+
+		"answer": "C"
+	}
+],
+"Answer": [
+	{
+		"userId" : 1,
+		"questionId": 1,
+		"answer": "A"
+	 },
+	{
+	
+		"userId" : 1,
+		"questionId": 2,
+		"answer": "A"
+	},
+	{
+		
+		"userId" : 1,
+		"questionId": 3,
+		"answer": "C"
+	}
+]
+}
