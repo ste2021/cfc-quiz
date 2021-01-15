@@ -1,10 +1,11 @@
 ### DEV : [Estela de Oliveira](https://github.com/ste2021) 🚀
 
 #### Observe the progress of this project in Trello, clicking ▶ [HERE](https://trello.com/b/XWwSZoEB/cfc-quiz-angular)
+##### If you want to contribute to this project, feel free ▶ [Click](https://trello.com/invite/b/XWwSZoEB/e6e22e4c66e198b4a3499b0b3e1c4a3e/cfc-quiz-angular)
 
 ```Project Summary```
 
-### Simulated questionnaire to help people pass the CRC exam, with questions from previous CFC exams
+### Quiz to help people pass the CRC exam, with questions from previous CFC exams
 
 ```Requirements```
 
