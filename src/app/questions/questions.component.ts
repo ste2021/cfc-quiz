@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, tap} from 'rxjs/operators';
 
 import { Questions } from '../models/questions';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-questions',
@@ -41,15 +42,30 @@ export class QuestionsComponent implements OnInit {
     this.loadQuestion();
   }
   //button Responder
-  buttonAnswer(){
+  async buttonAnswer(){
+    if(this.answer === undefined){
+      alert('Marque uma alternativa');
+    } 
     if(this.answer === this.question.answer){
-      alert('Parabéns Você acertou');
+    await Swal.fire({
+        title: 'Parabéns!',
+        text: 'Resposta correta!',
+        icon: 'success'
+    });
     } else {
-      alert('Errou');
+      await Swal.fire({
+        title: 'Ops!',
+        text: 'Resposta incorreta!',
+        icon: 'error'
+    });
     }
-   this.questionService.getAnswer(this.question.id,this.answer)
+   this.questionsService.getAnswer(this.question.id,this.answer)
    .subscribe((response: any) => {
-     alert('Resposta Enviada');
+      Swal.fire({
+        title: 'OK!',
+        text: 'Resposta enviada!',
+        icon: 'info'
+    });
      this.next();
    })
  }

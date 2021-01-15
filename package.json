@@ -27,6 +27,7 @@
     "json-server": "^0.16.3",
     "json-server-auth": "^2.0.2",
     "rxjs": "^6.0.0",
+    "sweetalert2": "^10.13.0",
     "tether": "^1.4.7",
     "zone.js": "^0.8.26"
   },
