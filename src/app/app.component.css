@@ -1,5 +1,9 @@
+body{
+    background: rgb(145,173,181);
+ background: linear-gradient(342deg, rgba(145,173,181,1) 0%, rgba(234,244,247,1) 35%, rgba(217,223,224,1) 100%);
+}
 footer{
-    font-size: 10px;
+    font-size: 12px;
     color: rgb(9, 64, 71);
     background-color: rgb(188, 228, 228);
     text-align: center;
