@@ -5,7 +5,7 @@
 
 ```Project Summary```
 
-### Simulated questionnaire to help people pass the CRC exam, with questions from previous CFC exams
+### Quiz to help people pass the CRC exam, with questions from previous CFC exams
 
 ```Requirements```
 
